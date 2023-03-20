@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class NumeroPart2 {
 	
+	
+	
 	private static int calcularFactorial(int num) {
 		int resultado = 1, i=2;
 		while(i <= num) {
