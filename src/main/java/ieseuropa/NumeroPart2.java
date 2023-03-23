@@ -11,12 +11,28 @@ public class NumeroPart2 {
 			i++;
 		}return resultado;
 	}
+	private static void calcularHora(int segundos) {
+		int hora = segundos /3600;
+		segundos %= 3600;
+		System.out.print("Son " + hora + " horas, ");
+		int minutos = segundos / 60 ;
+		System.out.print( minutos + " minutos, ");
+		segundos %= 60 ;
+		System.out.println(segundos + " segundos.");
+	}
 	
 
 	public static void main(String[] args) {
-		
+		Scanner teclado = new Scanner(System.in);
+
 		int	num = 8;
 		System.out.println("El factorial es: " + calcularFactorial(num));
+		
+		int	segundos = 25542;
+		calcularHora(segundos);
+		
+		
+		
 		
 		
 			
