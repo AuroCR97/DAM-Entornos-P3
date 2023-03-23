@@ -2,25 +2,43 @@ package main.java.ieseuropa;
 
 public class Cadena {
 
-	public static void calcularSol(double a, double b, double c) {
-	    double discriminante = b * b - 4 * a * c;
-	    double x1, x2;
-	    
-	    if (discriminante > 0) {
-	        x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
-	        x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
-	        System.out.println("Las soluciones son x1 = " + x1 + " y x2 = " + x2);
-	    } else if (discriminante == 0) {
-	        x1 = -b / (2 * a);
-	        System.out.println("La solución doble es x1 = x2 = " + x1);
-	    } else {
-	        System.out.println("No hay solución real.");
-	    }
+	
+
+	public static int longitud(String string) {
+
+		int size = string.length();
+
+		return size;
+
 	}
+	
+	public static String mayus(String string) {
+
+		return string = string.toUpperCase();
+
+	}
+
+	public static String minus(String string) {
+
+		return string = string.toLowerCase();
+
+	}
+	
+	public static void borrarOcurrencia(String a, String b) {
+		System.out.println(a.toLowerCase().replace(b.toLowerCase(), ""));
+	  }
 
 	public static void main(String[] args) {
 
-		calcularSol(1, -2 , 1);
+		
+		
+		System.out.println(longitud("holaHola"));
+		
+		System.out.println(mayus("hola"));
+		
+		System.out.println(minus("HOLAS"));
+		
+		borrarOcurrencia("RealMAdrid" , "real");
 	}
 
 }
