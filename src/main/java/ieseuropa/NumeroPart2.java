@@ -20,6 +20,20 @@ public class NumeroPart2 {
 		segundos %= 60 ;
 		System.out.println(segundos + " segundos.");
 	}
+	private static void seriePell () {
+		int pellPrevio = 0; 
+        int pellActual = 1; 
+
+        System.out.println(pellPrevio);
+        System.out.println(pellActual);
+        
+        for (int i = 2; i < 15; i++) {
+            int pellSiguiente = 2 * pellActual + pellPrevio;
+            System.out.println(pellSiguiente);
+            pellPrevio = pellActual;
+            pellActual = pellSiguiente;
+        }
+	}
 	
 
 	public static void main(String[] args) {
@@ -31,11 +45,9 @@ public class NumeroPart2 {
 		int	segundos = 25542;
 		calcularHora(segundos);
 		
+		System.out.println("Los primeros 15 numeros de la serie de Pell :");
+		seriePell();
 		
-		
-		
-		
-			
 	    }
 }
 
