@@ -20,6 +20,15 @@ public class Cadena {
 			}
 			
 		}
+	private static String ocurrencia(String texto) {
+		String resultado = "";
+		for (int i = 0; i < texto.length(); i++) {
+            char letra = texto.charAt(i);
+            resultado += letra;
+            resultado += letra;
+        }
+        return resultado;
+	}
 
 	public static void main(String[] args) {
 
@@ -31,6 +40,10 @@ public class Cadena {
 		String texto2 = "mundo";
 		int repetir = 5 ;
 		repetirTexto(texto1,texto2,repetir);
+		
+		String texto = "Hola mundo";
+		System.out.println(ocurrencia(texto));
+		
 		
 
 	}
