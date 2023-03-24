@@ -18,7 +18,6 @@ public class Cadena {
 				System.out.println(texto1);
 				System.out.println(texto2);
 			}
-			
 		}
 	private static String ocurrencia(String texto) {
 		String resultado = "";
