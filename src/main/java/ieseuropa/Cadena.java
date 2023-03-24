@@ -11,13 +11,43 @@ public class Cadena {
 		return size;
 
 	}
+
 	
 	public static String mayus(String string) {
 
 		return string = string.toUpperCase();
 
 	}
+	//--
+	private static int contarLetra(String cadena,char letra) {
+		int contador = 0;
+		
+		for(int i=0;i<cadena.length();i++) {
+			if(cadena.charAt(i) ==  letra) {
+				contador++;
+			}
+		}
+		return contador;
+	}
 
+	private static void repetirTexto(String texto1,String texto2,int repetir) {
+			
+			for(int i=0;i< repetir;i++) {
+				System.out.println(texto1);
+				System.out.println(texto2);
+			}
+		}
+	
+	private static String ocurrencia(String texto) {
+		String resultado = "";
+		for (int i = 0; i < texto.length(); i++) {
+            char letra = texto.charAt(i);
+            resultado += letra;
+            resultado += letra;
+        }
+        return resultado;
+	}
+//---------
 	public static String minus(String string) {
 
 		return string = string.toLowerCase();
@@ -39,6 +69,21 @@ public class Cadena {
 		System.out.println(minus("HOLAS"));
 		
 		borrarOcurrencia("RealMAdrid" , "real");
+		
+		
+		String cadena = "Hola mundo";
+		char letra = 'a';
+		System.out.println("La letra aparece " + contarLetra(cadena,letra) + " veces");
+		
+		
+		String texto1 = "Hola";
+		String texto2 = "mundo";
+		int repetir = 5;
+		repetirTexto(texto1,texto2,repetir);
+		
+		String texto = "Hola mundo";
+		System.out.println(ocurrencia(texto));
+		
 	}
 
 }
