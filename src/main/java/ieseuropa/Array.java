@@ -5,28 +5,52 @@ public class Array {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner (System.in);
-		
-		int []num = new int [10];
-		int i;
-		System.out.println("Introduce los elementos del array");
-		for (i=0; i<10; i++) {
-			num[i]=sc.nextInt();
-		}
-		for (i=0; i<10; i++) {
-			System.out.print(num[i]+" ");
-		}
-		int max = num[0];
-		int min = num[0];
 
-		for (i=0; i<10; i++) {
-			if (num[i]<min) {
-				min = num[i];
-			}else if (num[i]>max) {
-				max= num[i];
-			}
-		}
+		int num[] = rellenarArray(10);
+		imprmirArray(num);
 		System.out.println();
-		System.out.println("El numero mayor en el array es " + max);
-		System.out.println ("el numero menor en el array es "+ min);
+		maximo(num);
+		minimo(num);
+		
+		
+		
+		
+			}
+	public static void imprmirArray (int lista[]) {
+		int i;
+	for ( i=0; i<lista.length; i++) {
+		System.out.print(lista[i]+" ");
+		}
 	}
-}
+	public static int[]rellenarArray ( int a ){
+		int num[]= new int [10];
+		 int i; 
+		 a=1;
+		 for ( i=0; i<num.length; i++) {
+			 num[i]=a;
+			 a++;
+			 
+		 }return num; 
+	}	
+	
+	public static void minimo (int []valores) {
+	int i=0; 
+		int mayor=valores[0];
+		for (i=1;i<valores.length;i++) {
+		if (valores[i]>mayor) {
+			mayor=valores[i];
+		}
+	}System.out.println("el numero mayor es el "+ mayor);
+}	
+	
+	public static void maximo (int []valores) {
+		int i=0; 
+		int menor=valores[0];
+for (i=1;i<valores.length;i++) {
+		if (valores[i]<menor) {
+			menor=valores[i];
+		}
+			}System.out.println("el numero menor es el "+ menor);
+		}
+	}
+		
